@@ -1,0 +1,15 @@
+.mainOverlay{
+  display: flex;
+  height: 100vh;
+  background-color: rgba(195, 206, 206, 0.452);
+}
+
+.mainContentWrapper{
+  width: 80%;
+  display: flex;
+}
+
+.mainContent{
+  padding: 10px;
+  flex-grow: 1;
+}

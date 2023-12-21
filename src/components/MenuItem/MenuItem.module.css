@@ -1,0 +1,56 @@
+.menuItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  border-left: 5px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.nameIconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bigIcon{
+  font-size: 24px;
+}
+
+.menuItem:hover,
+.subMenuNameIcon:hover{
+  background: lightgray;
+}
+
+.menuItem span{
+  display: flex;
+}
+
+.subMenuWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.subMenuNameIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  border-left: 3px solid transparent;
+}
+
+.smallIcon{
+  display: flex;
+  font-size: 20px;
+}
+
+.activePageStyle{
+  border-left-color: gray;
+  background: #E4E9E9;
+}
