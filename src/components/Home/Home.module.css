@@ -4,6 +4,14 @@
   background-color: rgba(195, 206, 206, 0.452);
 }
 
+.menuIcon{
+  font-size: 35px;
+  cursor: pointer;
+  height: fit-content;
+  display: none;
+  background-color: rgb(195, 206, 206);
+}
+
 .mainContentWrapper{
   width: 80%;
   display: flex;
@@ -12,4 +20,18 @@
 .mainContent{
   padding: 10px;
   flex-grow: 1;
+}
+
+@media only screen and (max-width: 414px) {
+  .mainOverlay{
+    flex-direction: column;
+  }
+
+  .menuIcon{
+    display: flex;
+  }
+
+  .mainContentWrapper{
+    width: 100%;
+  }
 }

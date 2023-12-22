@@ -1,7 +1,48 @@
-.asideWrapper{
+.asideOverlay{
+  display: flex;
+  flex-direction: column;
   width: 20%;
-  margin: 0;
-  padding: 0;
+  height: 100%;
   background-color: rgb(195, 206, 206);
   border-right: 1px solid rgb(195, 206, 206);
+}
+
+.asideWrapper{
+  margin: 0;
+  padding: 0;
+}
+
+.openSideMenu {
+  display: block !important;
+}
+
+.closeSideMenu {
+  display: none;
+}
+
+.menuIcon{
+  display: none;
+  font-size: 35px;
+  cursor: pointer;
+  text-align: right;
+  height: fit-content;
+  background-color: rgb(195, 206, 206);
+  border: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+@media only screen and (max-width: 414px) {
+  .asideOverlay{
+    height: auto;
+  }
+  .asideOverlay{
+    width: auto;
+  }
+  
+  .menuIcon{
+    display: flex;
+  }
+
+  .asideWrapper {
+    display: none;
+  }
 }

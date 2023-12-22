@@ -3,6 +3,8 @@ import { FaHome, FaInfo, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaBuilding } from "react-icons/fa";
 import { MdGroups,MdContactSupport } from "react-icons/md";
 import MenuItem from "../MenuItem/MenuItem";
+import { MdOutlineMenu } from "react-icons/md";
+import { MdClose } from "react-icons/md";
 
 const menuList =[
   { name: 'Home', icon: <FaHome/>, page: 'Home Page'}, 
@@ -19,19 +21,30 @@ const menuList =[
    ]}
 ]
 
-const SideMenu = ({activePage, setActivePage}) => {
+const SideMenu = ({activePage, setActivePage, toggleMenu, setToggleMenu}) => {
+  console.log(toggleMenu)
   return (
-    <ul className={styles.asideWrapper}>
-      {menuList.map((item, index) => (  
-        <MenuItem 
-          key={index} 
-          index={index} 
-          item={item}
-          activePage={activePage}
-          setActivePage={setActivePage}
-        />
-      ))}
-    </ul>
+    <div className={`${styles.asideOverlay} ${toggleMenu ? styles.openSideMenu : ''}`}>
+      <div className={`${styles.menuIcon} ${toggleMenu ? styles.showIcons : ''}`} onClick={() => setToggleMenu(!toggleMenu)}>
+        { toggleMenu 
+          ? 
+            <MdClose/>
+          : 
+          <MdOutlineMenu/>
+        }
+      </div>
+      <ul className={`${toggleMenu ? styles.openSideMenu : ''} ${styles.asideWrapper}`}>
+        {menuList.map((item, index) => (  
+          <MenuItem 
+            key={index} 
+            index={index} 
+            item={item}
+            activePage={activePage}
+            setActivePage={setActivePage}
+          />
+        ))}
+      </ul>
+    </div>
   )
 }
 
